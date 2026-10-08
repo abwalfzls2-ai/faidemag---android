@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#101827">
+<title>فایدمگ | گزارش مطالعه</title>
+<style>
+:root{--bg:#0b1220;--panel:#121d2e;--panel2:#19263a;--text:#edf3ff;--muted:#9aabc4;--line:#293950;--accent:#67e8c0;--blue:#82aaff;--red:#ff8e9b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#172b42 0,transparent 34%),var(--bg);color:var(--text);font-family:Tahoma,"Arial",sans-serif;font-size:14px}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 14px;background:var(--accent);color:#092017;font-weight:700}button.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}button.danger{background:#482431;color:#ffdce2}header{padding:22px 18px 16px;max-width:900px;margin:auto} .brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--blue));display:grid;place-items:center;color:#0b1725;font-size:24px;font-weight:900;box-shadow:0 8px 25px #67e8c033}.brand h1{margin:0;font-size:25px;letter-spacing:-1px}.brand p{margin:5px 0 0;color:var(--muted);font-size:12px}.wrap{max-width:900px;margin:auto;padding:0 14px 40px}.tabs{display:flex;gap:7px;overflow:auto;padding:8px 0 15px}.tab{white-space:nowrap;background:transparent;color:var(--muted);border:1px solid var(--line);padding:10px 13px}.tab.active{background:var(--accent);color:#092017;border-color:transparent}.page{display:none}.page.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{background:linear-gradient(145deg,#152238,#101a2a);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:12px}.stat small,.muted{color:var(--muted)}.stat strong{display:block;font-size:25px;margin:8px 0 3px}.stat .emoji{font-size:19px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:18px 2px 10px}.section-title h2{font-size:16px;margin:0}.field{margin-bottom:12px}.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:7px}input,select,textarea{width:100%;background:#0b1423;border:1px solid var(--line);border-radius:11px;padding:12px;color:var(--text);outline:none}input:focus,select:focus,textarea:focus{border-color:var(--accent)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.actions{display:flex;gap:8px;flex-wrap:wrap}.actions button{flex:1}.entry{padding:13px 0;border-bottom:1px solid var(--line)}.entry:last-child{border-bottom:0}.entrytop{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.entry h3{margin:0 0 6px;font-size:14px}.pill{display:inline-block;background:#20364a;color:var(--accent);padding:5px 8px;border-radius:20px;font-size:11px}.entry p{color:var(--muted);margin:7px 0 0;line-height:1.7;font-size:12px}.bar{height:8px;background:#26344a;border-radius:10px;overflow:hidden;margin-top:10px}.bar span{height:100%;display:block;background:linear-gradient(90deg,var(--blue),var(--accent));border-radius:10px}.empty{text-align:center;padding:24px;color:var(--muted);line-height:1.8}.hint{font-size:12px;color:var(--muted);line-height:1.8}.timer{text-align:center;padding:20px 8px}.clock{font-size:48px;font-weight:800;letter-spacing:2px;margin:15px 0}.timer .actions{max-width:420px;margin:15px auto}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--accent);color:#092017;padding:12px 18px;border-radius:12px;display:none;z-index:5;box-shadow:0 8px 30px #0005}.footer{text-align:center;color:#70829d;font-size:11px;padding:22px 0}.mini{font-size:11px;color:var(--muted)}@media(min-width:650px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.maincols{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}.clock{font-size:58px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">ف</div><div><h1>فایدمگ</h1><p>ثبت هوشمند گزارش مطالعه · نسخه آزمایشی</p></div></div></header>
+<div class="wrap">
+<nav class="tabs">
+<button class="tab active" data-page="home">خانه</button><button class="tab" data-page="add">ثبت گزارش</button><button class="tab" data-page="reports">گزارش‌ها</button><button class="tab" data-page="timer">تایمر تمرکز</button><button class="tab" data-page="settings">تنظیمات</button>
+</nav>
+<section class="page active" id="home">
+<div class="grid">
+<div class="card stat"><small>📚 مطالعه امروز</small><strong id="todayHours">۰ دقیقه</strong><span class="mini">مجموع زمان ثبت‌شده</span></div>
+<div class="card stat"><small>🎯 تعداد جلسه‌ها</small><strong id="todaySessions">۰</strong><span class="mini">جلسه امروز</span></div>
+<div class="card stat"><small>🔥 زنجیره روزها</small><strong id="streak">۰ روز</strong><span class="mini">روزهای متوالی مطالعه</span></div>
+<div class="card stat"><small>📈 این هفته</small><strong id="weekHours">۰ دقیقه</strong><span class="mini">از شنبه تا امروز</span></div>
+</div>
+<div class="maincols"><div>
+<div class="section-title"><h2>آخرین گزارش‌ها</h2><button class="secondary" onclick="showPage('reports')">همه گزارش‌ها</button></div>
+<div class="card" id="recent"><div class="empty">هنوز گزارشی ثبت نشده.<br>اولین جلسه مطالعه‌ات را ثبت کن.</div></div>
+</div><div>
+<div class="section-title"><h2>هدف روزانه</h2></div>
+<div class="card"><div class="entrytop"><span>پیشرفت امروز</span><strong id="goalText">۰٪</strong></div><div class="bar"><span id="goalBar" style="width:0%"></span></div><p class="hint" id="goalHint">هدف روزانه را در تنظیمات مشخص کن.</p></div>
+<div class="card"><h2 style="font-size:15px;margin-top:0">✨ یادآوری فایدمگ</h2><p class="hint">گزارش دقیق فقط زمان را نمی‌شمارد؛ کمک می‌کند بفهمی چه درسی خواندی، چقدر تمرکز داشتی و قدم بعدی چیست.</p><button style="width:100%" onclick="showPage('add')">＋ ثبت جلسه مطالعه</button></div>
+</div></div>
+</section>
+<section class="page" id="add">
+<div class="section-title"><h2>ثبت گزارش مطالعه</h2><span class="pill">سریع و ساده</span></div>
+<div class="card"><form id="reportForm">
+<div class="formgrid"><div class="field"><label for="date">تاریخ</label><input id="date" type="date" required></div><div class="field"><label for="subject">درس</label><select id="subject" required></select></div></div>
+<div class="formgrid"><div class="field"><label for="topic">مبحث / فصل</label><input id="topic" placeholder="مثلاً ژنتیک، فصل ۲"></div><div class="field"><label for="duration">مدت مطالعه (دقیقه)</label><input id="duration" type="number" min="1" max="1440" placeholder="مثلاً ۶۰" required></div></div>
+<div class="formgrid"><div class="field"><label for="quality">کیفیت تمرکز</label><select id="quality"><option value="5">۵ از ۵ · عالی</option><option value="4" selected>۴ از ۵ · خوب</option><option value="3">۳ از ۵ · متوسط</option><option value="2">۲ از ۵ · کم</option><option value="1">۱ از ۵ · خیلی کم</option></select></div><div class="field"><label for="questions">تعداد تست / تمرین</label><input id="questions" type="number" min="0" placeholder="۰"></div></div>
+<div class="field"><label for="result">نتیجه یا درصد (اختیاری)</label><input id="result" placeholder="مثلاً ۱۸ تست، ۷۰٪ درست"></div>
+<div class="field"><label for="notes">یادداشت و اشکالات</label><textarea id="notes" rows="3" placeholder="چه چیزی یاد گرفتی؟ کجا مشکل داشتی؟"></textarea></div>
+<div class="field"><label for="next">کار بعدی</label><input id="next" placeholder="مثلاً مرور نکات و حل ۲۰ تست"></div>
+<div class="actions"><button type="submit">ذخیره گزارش</button><button type="reset" class="secondary">پاک کردن فرم</button></div>
+</form></div>
+<p class="hint">اطلاعات این نسخه روی همین مرورگر و همین دستگاه ذخیره می‌شود. پاک کردن داده‌های مرورگر ممکن است گزارش‌ها را حذف کند.</p>
+</section>
+<section class="page" id="reports">
+<div class="section-title"><h2>گزارش‌های مطالعه</h2><button class="secondary" onclick="exportCSV()">خروجی CSV</button></div>
+<div class="card"><div class="formgrid"><div class="field"><label for="filterSubject">فیلتر درس</label><select id="filterSubject"><option value="">همه درس‌ها</option></select></div><div class="field"><label for="filterRange">بازه</label><select id="filterRange"><option value="all">همه زمان‌ها</option><option value="7">۷ روز اخیر</option><option value="30">۳۰ روز اخیر</option></select></div></div></div>
+<div class="card" id="reportList"><div class="empty">هنوز گزارشی وجود ندارد.</div></div>
+</section>
+<section class="page" id="timer">
+<div class="section-title"><h2>تایمر تمرکز</h2><span class="pill">پومودورو</span></div>
+<div class="card timer"><p class="muted">یک بازه انتخاب کن و فقط روی درس تمرکز کن.</p><div class="actions"><button class="secondary" onclick="setTimer(25)">۲۵ دقیقه</button><button class="secondary" onclick="setTimer(45)">۴۵ دقیقه</button><button class="secondary" onclick="setTimer(60)">۶۰ دقیقه</button></div><div class="clock" id="clock">25:00</div><div class="actions"><button id="timerToggle" onclick="toggleTimer()">شروع</button><button class="secondary" onclick="resetTimer()">از نو</button></div><p class="hint" id="timerHint">بعد از پایان تایمر، مدت مطالعه را در بخش گزارش ثبت کن.</p></div>
+</section>
+<section class="page" id="settings">
+<div class="section-title"><h2>تنظیمات فایدمگ</h2></div>
+<div class="card"><div class="field"><label for="goal">هدف مطالعه روزانه (دقیقه)</label><input id="goal" type="number" min="1" max="1440" value="300"></div><div class="field"><label for="subjects">فهرست درس‌ها (هر درس در یک خط)</label><textarea id="subjects" rows="7"></textarea></div><button onclick="saveSettings()">ذخیره تنظیمات</button></div>
+<div class="card"><h2 style="font-size:15px">پشتیبان‌گیری و حریم خصوصی</h2><p class="hint">برای نگه‌داشتن نسخه‌ای از اطلاعات، خروجی CSV را از صفحه گزارش‌ها بگیر. داده‌ها در این نسخه به سرور ارسال نمی‌شوند.</p><div class="actions"><button class="secondary" onclick="backupJSON()">پشتیبان JSON</button><button class="danger" onclick="clearData()">حذف همه گزارش‌ها</button></div></div>
+</section>
+<div class="footer">فایدمگ · نسخه اولیه · ساخته‌شده برای پیگیری بهتر مطالعه</div>
+</div><div class="toast" id="toast"></div>
+<script>
+const DEFAULT_SUBJECTS=['زیست‌شناسی','شیمی','فیزیک','ریاضی','زمین‌شناسی','فارسی','عربی','دین و زندگی','زبان انگلیسی'];
+const $=id=>document.getElementById(id);
+const fa=n=>Number(n).toLocaleString('fa-IR');
+const todayISO=()=>{let d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+let reports=[],settings={goal:300,subjects:DEFAULT_SUBJECTS},timerSeconds=1500,timerInitial=1500,timerInterval=null,timerRunning=false;
+try{reports=JSON.parse(localStorage.getItem('faidemag_reports')||'[]');settings={...settings,...JSON.parse(localStorage.getItem('faidemag_settings')||'{}')};}catch(e){}
+function persist(){localStorage.setItem('faidemag_reports',JSON.stringify(reports));localStorage.setItem('faidemag_settings',JSON.stringify(settings))}
+function toast(msg){let t=$('toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',2200)}
+function showPage(name){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===name));document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.page===name));if(name==='reports')renderReports();window.scrollTo(0,0)}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+function fillSubjects(){const options=settings.subjects.map(s=>`<option>${escapeHtml(s)}</option>`).join('');$('subject').innerHTML=options;$('filterSubject').innerHTML='<option value="">همه درس‌ها</option>'+options}
+function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function mins(n){let h=Math.floor(n/60),m=n%60;return h?`${fa(h)} ساعت و ${fa(m)} دقیقه`:`${fa(m)} دقیقه`}
+function saveSettings(){settings.goal=Math.max(1,Number($('goal').value)||300);settings.subjects=$('subjects').value.split('\n').map(s=>s.trim()).filter(Boolean);if(!settings.subjects.length)settings.subjects=DEFAULT_SUBJECTS;persist();fillSubjects();renderHome();toast('تنظیمات ذخیره شد')}
+$('reportForm').addEventListener('submit',e=>{e.preventDefault();const item={id:Date.now(),date:$('date').value,subject:$('subject').value,topic:$('topic').value.trim(),duration:Number($('duration').value),quality:Number($('quality').value),questions:Number($('questions').value)||0,result:$('result').value.trim(),notes:$('notes').value.trim(),next:$('next').value.trim()};if(!item.date||!item.subject||item.duration<1){toast('تاریخ، درس و مدت را وارد کن');return}reports.unshift(item);persist();$('reportForm').reset();$('date').value=todayISO();$('quality').value='4';renderHome();toast('گزارش با موفقیت ذخیره شد');showPage('home')});
+function reportHTML(r){return `<div class="entry"><div class="entrytop"><div><h3>${escapeHtml(r.subject)}${r.topic?' · '+escapeHtml(r.topic):''}</h3><span class="mini">${escapeHtml(r.date)}</span></div><div style="text-align:left"><strong>${mins(r.duration)}</strong><br><span class="pill">تمرکز ${fa(r.quality)}/۵</span></div></div><p>🧩 تست/تمرین: ${fa(r.questions||0)}${r.result?' · نتیجه: '+escapeHtml(r.result):''}</p>${r.notes?`<p>📝 ${escapeHtml(r.notes)}</p>`:''}${r.next?`<p>➡️ بعدی: ${escapeHtml(r.next)}</p>`:''}<div style="text-align:left;margin-top:8px"><button class="danger" onclick="deleteReport(${r.id})" style="padding:7px 10px;font-size:11px">حذف گزارش</button></div></div>`}
+function renderHome(){let d=todayISO(),today=reports.filter(r=>r.date===d),sum=today.reduce((a,r)=>a+r.duration,0);$('todayHours').textContent=mins(sum);$('todaySessions').textContent=fa(today.length);let now=new Date(),start=new Date(now);let day=(now.getDay()+1)%7;start.setDate(now.getDate()-day);start.setHours(0,0,0,0);let week=reports.filter(r=>new Date(r.date+'T12:00:00')>=start&&r.date<=d).reduce((a,r)=>a+r.duration,0);$('weekHours').textContent=mins(week);let days=[...new Set(reports.map(r=>r.date))].sort().reverse(),streak=0,check=new Date();if(!days.includes(d))check.setDate(check.getDate()-1);for(;;){let k=`${check.getFullYear()}-${String(check.getMonth()+1).padStart(2,'0')}-${String(check.getDate()).padStart(2,'0')}`;if(days.includes(k)){streak++;check.setDate(check.getDate()-1)}else break;if(streak>365)break}$('streak').textContent=fa(streak)+' روز';let pct=Math.min(100,Math.round(sum/(settings.goal||300)*100));$('goalText').textContent=fa(pct)+'٪';$('goalBar').style.width=pct+'%';$('goalHint').textContent=`${mins(sum)} از هدف ${mins(settings.goal||300)}`;$('recent').innerHTML=reports.length?reports.slice(0,4).map(reportHTML).join(''):'<div class="empty">هنوز گزارشی ثبت نشده.<br>اولین جلسه مطالعه‌ات را ثبت کن.</div>'}
+function renderReports(){let subj=$('filterSubject').value,range=$('filterRange').value,cut=new Date();cut.setDate(cut.getDate()-(range==='all'?10000:Number(range)));let list=reports.filter(r=>(!subj||r.subject===subj)&&(range==='all'||new Date(r.date+'T12:00:00')>=cut));$('reportList').innerHTML=list.length?`<p class="hint">تعداد گزارش‌ها: ${fa(list.length)} · مجموع مطالعه: ${mins(list.reduce((a,r)=>a+r.duration,0))}</p>`+list.map(reportHTML).join(''):'<div class="empty">گزارشی با این فیلتر پیدا نشد.</div>'}
+$('filterSubject').addEventListener('change',renderReports);$('filterRange').addEventListener('change',renderReports);
+function deleteReport(id){if(!confirm('این گزارش حذف شود؟'))return;reports=reports.filter(r=>r.id!==id);persist();renderHome();renderReports();toast('گزارش حذف شد')}
+function download(name,content,type){let blob=new Blob([content],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();URL.revokeObjectURL(url)}
+function exportCSV(){let rows=[['تاریخ','درس','مبحث','مدت دقیقه','تمرکز','تست','نتیجه','یادداشت','کار بعدی'],...reports.map(r=>[r.date,r.subject,r.topic,r.duration,r.quality,r.questions,r.result,r.notes,r.next])];let csv='\ufeff'+rows.map(row=>row.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\n');download('faidemag-reports.csv',csv,'text/csv;charset=utf-8')}
+function backupJSON(){download('faidemag-backup.json',JSON.stringify({reports,settings},null,2),'application/json');toast('پشتیبان آماده شد')}
+function clearData(){if(!confirm('همه گزارش‌ها برای همیشه از این مرورگر حذف شوند؟'))return;reports=[];persist();renderHome();renderReports();toast('گزارش‌ها حذف شدند')}
+function setTimer(m){pauseTimer();timerSeconds=m*60;timerInitial=timerSeconds;renderClock();$('timerHint').textContent=`تایمر روی ${fa(m)} دقیقه تنظیم شد.`}
+function renderClock(){$('clock').textContent=String(Math.floor(timerSeconds/60)).padStart(2,'0')+':'+String(timerSeconds%60).padStart(2,'0')}
+function toggleTimer(){if(timerRunning){pauseTimer();return}timerRunning=true;$('timerToggle').textContent='توقف';timerInterval=setInterval(()=>{timerSeconds--;renderClock();if(timerSeconds<=0){pauseTimer();timerSeconds=0;renderClock();$('timerHint').textContent='آفرین! بازه تمرکز تمام شد؛ گزارش مطالعه‌ات را ثبت کن.';toast('زمان تمرکز تمام شد!')}},1000)}
+function pauseTimer(){clearInterval(timerInterval);timerInterval=null;timerRunning=false;if($('timerToggle'))$('timerToggle').textContent='شروع'}
+function resetTimer(){pauseTimer();timerSeconds=timerInitial;renderClock();$('timerHint').textContent='تایمر از نو تنظیم شد.'}
+$('date').value=todayISO();$('goal').value=settings.goal;$('subjects').value=settings.subjects.join('\n');fillSubjects();renderHome();renderReports();
+</script>
+</body></html>
